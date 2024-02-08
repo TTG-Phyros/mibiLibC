@@ -23,9 +23,9 @@ check_second_arg:
     jmp return_diff
 
 return_diff:
-    mov r9b, 0
+    mov r9, 0
     add r9b, BYTE[rdi + rcx]
-    sub r9b, r8b
+    sub r9, r8
     mov rax, r9
     ret
 

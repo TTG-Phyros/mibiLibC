@@ -20,9 +20,9 @@ main_loop_suite:
     jmp main_loop
 
 check_case:
-    mov r9b, 0
+    mov r9, 0
     add r9b, BYTE[rdi + rcx]
-    sub r9b, r8b
+    sub r9, r8
     cmp r9, 32
     je main_loop_suite
     cmp r9, -32
@@ -33,9 +33,9 @@ check_case:
 check_second_arg:
     cmp r8b, 0
     je return_zero
-    mov r9b, 0
+    mov r9, 0
     add r9b, BYTE[rdi + rcx]
-    sub r9b, r8b
+    sub r9, r8
     mov rax, r9
     ret
 
