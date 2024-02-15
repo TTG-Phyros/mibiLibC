@@ -23,7 +23,8 @@ $(NAME):
 	nasm -f elf64 strstr.asm
 	nasm -f elf64 strpbrk.asm
 	nasm -f elf64 strcspn.asm
-	ld -shared strlen.o strchr.o strrchr.o strstr.o strpbrk.o strcmp.o memcpy.o memset.o strcasecmp.o strncmp.o strcspn.o -o $(NAME)
+	nasm -f elf64 memmove.asm
+	ld -shared strlen.o strchr.o strrchr.o strstr.o strpbrk.o strcmp.o memcpy.o memset.o strcasecmp.o strncmp.o strcspn.o memmove.o -o $(NAME)
 valgrind: $(NAME)
 	clear
 	valgrind ./$(NAME) | cat -e
