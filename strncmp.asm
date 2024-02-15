@@ -5,6 +5,8 @@ SECTION .text
 strncmp:
     mov rax, 0
     mov rcx, 0
+    mov r8, 0
+    mov r9, 0
 
 main_loop:
     cmp rcx, rdx

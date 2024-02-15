@@ -8,7 +8,7 @@ strchr:
 
 main_loop:
     cmp BYTE[rdi + rcx], 0
-    jmp return_zero
+    je return_zero
     cmp BYTE[rdi + rcx], sil
     je return_pos
     inc rcx

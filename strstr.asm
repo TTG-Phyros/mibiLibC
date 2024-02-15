@@ -5,6 +5,7 @@ SECTION .text
 strstr:
     mov rax, 0
     mov rcx, 0
+    mov r8, 0
     mov r9, 0
 
 main_loop:
@@ -14,12 +15,12 @@ main_loop:
     cmp r8b, 0
     je found_substr
     cmp BYTE[rdi + rcx], r8b
-    jne main_loop_suite
+    jne reset
     inc r9
     inc rcx
     jmp main_loop
 
-main_loop_suite:
+reset:
     mov r9, 0
     inc rcx
     jmp main_loop
