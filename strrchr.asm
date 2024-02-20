@@ -8,18 +8,19 @@ strrchr:
     mov r8, 0
 
 main_loop:
-    cmp BYTE[rdi + rcx], 0
-    je return
     cmp BYTE[rdi + rcx], sil
     je change_ans
+
+suite_loop:
+    cmp BYTE[rdi + rcx], 0
+    je return
     inc rcx
     jmp main_loop
 
 change_ans:
     mov r8, rdi
     add r8, rcx
-    inc rcx
-    jmp main_loop
+    jmp suite_loop
 
 return:
     mov rax, r8
