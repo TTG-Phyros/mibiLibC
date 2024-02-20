@@ -15,7 +15,7 @@ main_loop:
     cmp BYTE[rdi + rcx], 0
     je check_second_arg
     cmp r8b, 0
-    je return_zero
+    je return_diff
     cmp BYTE[rdi + rcx], r8b
     jne return_diff
     inc rcx
