@@ -32,5 +32,8 @@ found_substr:
     ret
 
 return_zero:
+    mov r8b, BYTE[rsi + r9]
+    cmp r8b, 0
+    je found_substr
     mov rax, 0
     ret
