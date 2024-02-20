@@ -13,7 +13,7 @@ main_loop:
     cmp BYTE[rdi + rcx], 0
     je check_second_arg
     cmp r8b, 0
-    je return_zero
+    je check_case
     cmp BYTE[rdi + rcx], r8b
     jne check_case
 
