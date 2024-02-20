@@ -7,10 +7,10 @@ strchr:
     mov rcx, 0
 
 main_loop:
-    cmp BYTE[rdi + rcx], 0
-    je return_zero
     cmp BYTE[rdi + rcx], sil
     je return_pos
+    cmp BYTE[rdi + rcx], 0
+    je return_zero
     inc rcx
     jmp main_loop
 
