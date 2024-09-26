@@ -60,11 +60,11 @@ Grâce à son implémentation en assembleur, miniLibC propose une meilleure perf
 
 ### Clone le dépôt :
 
-    git clone https://github.com/ton-compte/MyNavy.git
+    git clone https://github.com/ton-compte/miniLibC.git
 
 ### Accède au dossier du projet :
 
-    cd MyNavy
+    cd miniLibC
 
 ### Compile le projet :
 
